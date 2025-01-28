@@ -1,0 +1,16 @@
+<h2>Votre Panier</h2>
+
+{% if products_in_cart %}
+    <ul>
+        {% for item in products_in_cart %}
+            <li>
+                <p>{{ item.product.name }} - {{ item.quantity }} x {{ item.product.price }}€</p>
+                <a href="{% url 'store:remove_from_cart' item.product.id %}">Supprimer</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <p>Total : {{ total_price }}€</p>
+    <a href="{% url 'store:empty_cart' %}" class="btn btn-danger">Vider le panier</a>
+{% else %}
+    <p>Votre panier est vide.</p>
+{% endif %}

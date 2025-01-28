@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de Commande</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #28a745; /* Vert pour la confirmation */
+            font-size: 36px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #444;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .order-details {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-details strong {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .contact {
+            font-size: 20px;
+            color: #007bff;
+            margin-top: 30px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        a:hover {
+            background-color: #218838;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #777;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Merci pour votre commande, {{ name }} !</h1>
+
+    <p>Votre commande a été enregistrée avec succès. Voici le récapitulatif :</p>
+
+    <div class="order-details">
+        <h3>Détails de la commande :</h3>
+        <p><strong>Produits :</strong> {{ items }}</p>
+    </div>
+
+    <div class="contact">
+        <h2>Pour toute préoccupation, contactez-nous au : +225 0595646392</h2>
+    </div>
+
+    <a href="/">Retour à l'accueil</a>
+
+    <div class="footer">
+        <p>&copy; 2025 Notre Boutique - Tous droits réservés.</p>
+    </div>
+
+</body>
+</html>
